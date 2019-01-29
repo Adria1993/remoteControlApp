@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar hideBackButton color="dark">
+    <ion-title>Servers available</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="getstart" padding>
+  <ion-list *ngFor="let item of servers;">
+    <ion-item class="item item-trns text-center" (click)="serverClicked(item.ip)">
+      <ion-avatar item-start>
+        <img src="{{item.image}}">
+      </ion-avatar>
+      <h2>{{item.name}}</h2>
+      <p id="ipServer">{{item.ip}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer no-border>
+	<ion-toolbar transparent>
+    <button (click)="searchAgain()" ion-button full text-uppercase>Search again</button>
+	</ion-toolbar>
+</ion-footer>

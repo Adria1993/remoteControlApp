@@ -1,0 +1,98 @@
+<!--
+  Generated template for the ControllerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>controller</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="getstart" padding>
+  <div class="container">
+    <ion-list>
+      <ion-list-header class="transparent">
+        Volume
+        <ion-badge item-end color="dark">{{volume}}</ion-badge>
+      </ion-list-header>
+      <ion-item class="transparent">
+        <ion-range (ionChange)="changeVolume($event)" [(ngModel)]="volume" color="dark">
+          <ion-icon ion-long-press (onPressing)="volumeDown()" (click)="volumeDown()" range-left small name="ios-remove-circle-outline"></ion-icon>
+          <ion-icon ion-long-press (onPressing)="volumeUp()" (click)="volumeUp()" range-right name="ios-add-circle-outline"></ion-icon>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+    <div id="matrixDiv">
+      <table id="matrix">
+        <tr>
+          <td>
+          </td>
+          <td>
+            <button (click)="closeActualWindow()" ion-button icon-only color="dark">
+              <ion-icon name="close-circle"></ion-icon>
+            </button>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <button (click)="pressTabulator()" ion-button icon-only color="dark">
+              <ion-icon name="ios-aperture-outline"></ion-icon>
+            </button>
+          </td>
+          <td>
+            <button (click)="pressUp()" ion-button icon-only color="dark">
+              <ion-icon name="ios-arrow-dropup-outline"></ion-icon>
+            </button>
+          </td>
+          <td>
+            <button (click)="pressEnter()" ion-button icon-only color="dark">
+              <ion-icon name="ios-send-outline"></ion-icon>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button (click)="pressLeft()" ion-button icon-only color="dark">
+              <ion-icon name="ios-arrow-dropleft-outline"></ion-icon>
+            </button>
+          </td>
+          <td>
+            <button (click)="pressSpace()" ion-button icon-only color="dark">
+              <ion-icon name="ios-play-outline"></ion-icon>
+            </button>
+          </td>
+          <td>
+            <button (click)="pressRight()" ion-button icon-only color="dark">
+              <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <button (click)="pressDown()" ion-button icon-only color="dark">
+              <ion-icon name="ios-arrow-dropdown-outline"></ion-icon>
+            </button>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar transparent>
+    <button color="dark" (click)="mouseController()" ion-button full text-uppercase>Mouse Controller</button>
+    <button color="dark" (click)="audioController()" ion-button full text-uppercase>Audio Player Controller</button>
+  </ion-toolbar>
+</ion-footer>

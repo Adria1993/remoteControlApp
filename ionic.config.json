@@ -1,0 +1,7 @@
+{
+  "name": "remoteControlApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

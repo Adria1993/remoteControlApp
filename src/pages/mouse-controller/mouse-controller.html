@@ -1,0 +1,77 @@
+<!--
+  Generated template for the MouseControllerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Mouse Controller</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="getstart" padding>
+  <div id="matrixDiv">
+    <table id="matrix">
+      <tr>
+        <td>
+          <button (click)="leftClick()" ion-button icon-only color="dark">
+            <ion-icon name="return-left"></ion-icon>
+          </button>
+        </td>
+        <td>
+          <button interval="50" ion-long-press (click)="moveMouseUp()" (onPressing)="moveMouseUp()" ion-button
+            icon-only color="dark">
+            <ion-icon name="ios-arrow-dropup-outline"></ion-icon>
+          </button>
+        </td>
+        <td>
+          <button (click)="rightClick()" ion-button icon-only color="dark">
+            <ion-icon name="return-right"></ion-icon>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button interval="50" ion-long-press (click)="moveMouseLeft()" (onPressing)="moveMouseLeft()"
+            ion-button icon-only color="dark">
+            <ion-icon name="ios-arrow-dropleft-outline"></ion-icon>
+          </button>
+        </td>
+        <td>
+        </td>
+        <td>
+          <button interval="50" ion-long-press (click)="moveMouseRight()" (onPressing)="moveMouseRight()"
+            ion-button icon-only color="dark">
+            <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+          <button interval="50" ion-long-press (click)="pressUp()" (onPressing)="pressUp()" ion-button icon-only
+            color="dark">
+            <ion-icon name="ios-arrow-up-outline"></ion-icon>
+          </button>
+        </td>
+        <td>
+          <button interval="50" ion-long-press (click)="moveMouseDown()" (onPressing)="moveMouseDown()"
+            ion-button icon-only color="dark">
+            <ion-icon name="ios-arrow-dropdown-outline"></ion-icon>
+          </button>
+        </td>
+        <td>
+          <button interval="50" ion-long-press (click)="pressDown()" (onPressing)="pressDown()" ion-button
+            icon-only color="dark">
+            <ion-icon name="ios-arrow-down-outline"></ion-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</ion-content>

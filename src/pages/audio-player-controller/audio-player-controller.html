@@ -1,0 +1,50 @@
+<!--
+  Generated template for the AudioPlayerControllerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>AudioPlayerController</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="getstart" padding>
+  <ion-list>
+    <ion-list-header class="transparent">
+      Volume
+      <ion-badge item-end color="dark">{{volume}}</ion-badge>
+    </ion-list-header>
+    <ion-item class="transparent">
+      <ion-range (ionChange)="changeVolume($event)" [(ngModel)]="volume" color="dark">
+        <ion-icon ion-long-press (onPressing)="volumeDown()" (click)="volumeDown()" range-left small name="ios-remove-circle-outline"></ion-icon>
+        <ion-icon ion-long-press (onPressing)="volumeUp()" (click)="volumeUp()" range-right name="ios-add-circle-outline"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+  <table id="matrix">
+    <tr>
+      <td>
+        <button (click)="previousSong()" ion-button icon-only color="dark">
+          <ion-icon name="ios-skip-backward-outline"></ion-icon>
+        </button>
+      </td>
+      <td>
+        <button (click)="playOrPause()" ion-button icon-only color="dark">
+            <ion-icon 
+            [name]="visible ? 'ios-play-outline' :'ios-pause-outline'">
+        </ion-icon>
+        </button>
+      </td>
+      <td>
+        <button (click)="nextSong()" ion-button icon-only color="dark">
+          <ion-icon name="ios-skip-forward-outline"></ion-icon>
+        </button>
+      </td>
+    </tr>
+  </table>
+</ion-content>

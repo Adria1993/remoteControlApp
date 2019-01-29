@@ -1,0 +1,36 @@
+<!--
+  Generated template for the InitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton color="dark">
+    <ion-title>Remote Control App</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="getstart" padding>
+  <div class="inputContainer">
+      <progress-bar [progress]="loadProgress"></progress-bar>
+  </div>
+  <div>
+    <ion-label id="informer">{{this.servers.length}} Server found it of 255 server possibilities</ion-label>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <button [disabled]="buttonDisabled" color="dark" ion-button icon-only (click)="searchMother()">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
